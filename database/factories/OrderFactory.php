@@ -14,10 +14,12 @@ class OrderFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    public function definition(): array // Establece como se deben generar los datos para un modelo especifico
     {
         return [
-            //
+            'details'       => $this->faker->sentences(4, true), //Parrafo con 4 oraciones, juntas en un solo parrafo.
+            'client'        => $this->faker->name(),
+            'is_fulfilled'  => $this->faker->boolean(),
         ];
     }
 }

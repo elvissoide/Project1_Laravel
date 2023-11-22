@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('details');
             $table->string('client');
-            $table->boolean('is_fulfilled')->default(false);
+            $table->boolean('is_fulfilled')->default(false); // created_at y updated_at
             $table->timestamps();
         });
     }
